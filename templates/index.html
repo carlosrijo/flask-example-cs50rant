@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <center>
+        <a href="new_post">Add a new post</a>
+        {% for post in posts %}
+            <h1> {{ post.title }} </h1>
+            <h4>Posted at: {{ post.date.strftime('%m/%d/%Y at %I:%M%p') }} </h4>
+            <p> {{ post.text }}</p>
+            <br>
+            <br>
+        {% endfor %}
+    </center>
+</body>
+</html>
